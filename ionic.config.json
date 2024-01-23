@@ -1,0 +1,7 @@
+{
+  "name": "planilha2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
