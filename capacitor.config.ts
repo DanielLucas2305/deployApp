@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'planilha2',
   webDir: 'www',
   server: {
-    androidScheme: 'https'
+    androidScheme: 'http'
   }
 };
 

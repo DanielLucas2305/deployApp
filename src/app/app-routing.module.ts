@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'new-client',
+    loadChildren: () => import('./pages/new-client/new-client.module').then( m => m.NewClientPageModule)
+  },
 ];
 
 @NgModule({
