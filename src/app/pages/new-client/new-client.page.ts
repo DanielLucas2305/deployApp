@@ -14,7 +14,7 @@ import { LoadingController } from '@ionic/angular';
 
 export class NewClientPage implements OnInit {
   form: FormGroup;
-  isEmailValid: boolean = false;
+  // isEmailValid: boolean = false;
   errorMessage: string | undefined;
 
   constructor(
@@ -27,9 +27,9 @@ export class NewClientPage implements OnInit {
       nome: ['', Validators.required],
       empresa: [''],
       telefone: [''],
-      cnpj: [''],
-      cpf: [''],
-      email: ['', [Validators.required, Validators.email]],
+      // cnpj: [''],
+      // cpf: [''],
+      // email: ['', [Validators.required, Validators.email]],
     });
   }
   
@@ -37,19 +37,19 @@ export class NewClientPage implements OnInit {
     mask: ['(',/\d/,/\d/,')', ' ', /\d/,/\d/,/\d/,/\d/,/\d/,' ','-',' ',/\d/,/\d/,/\d/,/\d/],
   };
   
-  readonly cnpjj: MaskitoOptions = {
-    mask: [/\d/,/\d/,'.', /\d/,/\d/,/\d/,'.',/\d/,/\d/,/\d/,'/',/\d/,/\d/,/\d/,/\d/,'-',/\d/,/\d/],
-  };
+  // readonly cnpjj: MaskitoOptions = {
+  //   mask: [/\d/,/\d/,'.', /\d/,/\d/,/\d/,'.',/\d/,/\d/,/\d/,'/',/\d/,/\d/,/\d/,/\d/,'-',/\d/,/\d/],
+  // };
   
-  readonly cpff: MaskitoOptions = {
-    mask: [/\d/,/\d/,/\d/,'.',/\d/,/\d/,/\d/,'.',/\d/,/\d/,/\d/,'-',/\d/,/\d/],
-  };
+  // readonly cpff: MaskitoOptions = {
+  //   mask: [/\d/,/\d/,/\d/,'.',/\d/,/\d/,/\d/,'.',/\d/,/\d/,/\d/,'-',/\d/,/\d/],
+  // };
 
   readonly maskPredicate: MaskitoElementPredicateAsync = async (el) => (el as HTMLIonInputElement).getInputElement();
 
-  checkEmailValidity() {
-    this.isEmailValid = this.form.get('email')?.valid || false;
-  }
+  // checkEmailValidity() {
+  //   this.isEmailValid = this.form.get('email')?.valid || false;
+  // }
   
 
   ngOnInit(): void {  }

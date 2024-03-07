@@ -32,7 +32,7 @@
       [maskito]="phoneMask"
       [maskitoElement]="maskPredicate"
     ></ion-input>
-    <ion-input
+    <!-- <ion-input
       formControlName="cnpj"
       label="CNPJ"
       name="CNPJ"
@@ -62,17 +62,18 @@
       placeholder="abcd@example.com"
       errorText="Invalid email"
       (input)="checkEmailValidity()"
-    ></ion-input>
-    <ion-text
+    ></ion-input> -->
+    <!-- <ion-text
       *ngIf="form.get('email')?.hasError('email') && form.get('email')?.touched"
     >
       <p class="error-text">Endereço de e-mail inválido</p>
-    </ion-text>
+      //[disabled]="!isEmailValid"
+    </ion-text> -->
     <ion-button
       expand="full"
       shape="round"
       type="submit"
-      [disabled]="!isEmailValid"
+      
       >Enviar</ion-button
     >
   </form>
